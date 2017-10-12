@@ -1,3 +1,37 @@
 <div class="container" ng-controller="subjectsCT">
-    <h1 >{{$scope.data.name}}</h1>
+    <div>
+      <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Subject Name</th>
+        <th>Duration</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="subject in subjects">
+      <tr>
+        <td>{{subject.name}}</td>
+        <td>{{subject.duration}}</td>
+        <td>{{subject.time}}</td>
+      </tr>
+    </tbody>
+    </table>
+    </div>
+    <br/>
+    <br/>
+    <div>
+     <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="addSubjects()">Add subjects</button>
+    </div>
+    <div  ng-hide="myValue" class="ng-hide">
+       <form class="form-signin" role="form" ng-submit='submit()'>
+        <div  style="padding-bottom:0px;">
+        <br/>
+            <h2> subjects</h2>
+        </div>
+        <input class="form-control" type="text" ng-model="data.name" placeholder="Name">
+        <input class="form-control" type="text" ng-model="data.time" placeholder="Duration">
+        <input class="form-control" type="text" ng-model="data.duration" placeholder="Time">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </form>
+    </div>
 </div>
