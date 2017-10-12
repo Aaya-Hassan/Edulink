@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+
+
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    html body { 
+      background: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2011/12/education.jpg') no-repeat center center fixed; 
+      background-size: 100% 100%;
+    }
+    #wiste-title{
+      display: block;
+      max-width: 500px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      display: inline-block;
+      max-width: 200px;
+      color: #16161d;
+      font-size: 40px;
+
+    }
+    a {
+      color: white;
+    }
+    div nav{
+      color: red
+    }
+    .img{
+      height:30px;
+      width: 30px;
+      top:40px;
+      left:20px
+    }
+  </style>
+
+
+</head>
+<body ng-app="MyApp">
+  <div>
+    <div id="container" class= "ng-scope">
+     
+    </div id='#ant'>
+    <div class="container">
+      <div >
+        <div class="container">
+          <div class="row">
+            <div ng-view></div>
+          </div>
+        </div>
+      </md-content>
+
+    </div>    
+  </div>
+
+</div>
+<script src="signin/signin.js"></script>
+<script src="app.js"></script>
+<script src="services/serv.js"></script>
+<script src="subjects/subjects.js"></script>
+
+
+
+</body>
+</html>
