@@ -1,29 +1,31 @@
+//app.js
 angular.module('MyApp',[
-  'MyApp.service',
+  'MyApp.serv',
   'MyApp.signin',
   'MyApp.subjects',
   'ngRoute'])
-.config(function ($routeProvider, $httpProvider) {
+.config(function ($routeProvider, $httpProvider, $locationProvider) {
   $routeProvider
   .when('/signin', {
     templateUrl: 'signin/signin.html',
     controller: 'signinCT'
   })
-  .when('/subjects', {
+  .when('/subjects',{
     templateUrl: 'subjects/subjects.html',
     controller: 'subjectsCT',
     authenticate: true
   })
   .otherwise({
-    redirectTo: '/signin'
+    redirectTo: '/subjects'
   });
   $httpProvider.interceptors.push('AttachTokens');
+     // $locationProvider.html5Mode(true);
 })
 .factory('AttachTokens', function ($window) {
   return{
     attach : {
       request: function (object) {
-        var jwt = $window.localStorage.getItem('token.subjects');
+        var jwt = $window.localStorage.getItem('token.airline');
         if (jwt) {
           object.headers['x-access-token'] = jwt;
         }
@@ -36,7 +38,7 @@ angular.module('MyApp',[
 .run(function ($rootScope, $location, account) {
   $rootScope.$on('$routeChangeStart', function (evt, next, current) {
     if (next.$$route && next.$$route.authenticate && !account.isAuth()) {
-      $location.path('/signin');
+      $location.path('/subjects');
     }
   });
 });
