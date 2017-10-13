@@ -1,0 +1,47 @@
+<div class="container" ng-controller="registrationCT" style="text-align: center;">
+<br/>
+<div  style="display: inline; float: left; margin-top: 2.1em;">
+  <h3> Teacher Table </h3>
+      <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Subject Name</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="subject in subjects">
+      <tr>
+        <td><input type="checkbox" name="vehicle" ng-click="ShowSelected()" ng-model="selected[subject.id]">{{subject.name}}</td>
+        <td>{{subject.startTime}}</td>
+        <td>{{subject.endTime}}</td>
+        <td>{{subject.duration}}</td>
+      </tr>
+    </tbody>
+    </table>
+    <br/>
+    </div>
+    <div style="display:inline; float: right; padding-left: 30px">
+  <h3> Student  </h3>
+  <h4> Time left: {{timeLeft}}  </h4>
+      <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Subject Name</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="object in addedSubjects">
+      <tr>
+        <td>{{object.name}}</td>
+        <td>{{object.startTime}}</td>
+        <td>{{object.endTime}}</td>
+        <td>{{object.duration}}</td>
+      </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
