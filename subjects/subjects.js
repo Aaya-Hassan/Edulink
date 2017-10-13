@@ -4,6 +4,7 @@ angular.module('MyApp.subjects', [])
 	$scope.myValue = true
 	$scope.data = {}
 	$scope.value = 0
+	console.log('subject page')
 	$scope.generateId = function(){
 		if($window.localStorage.getItem('value') === null){
           $window.localStorage.setItem("value", 0)
@@ -27,8 +28,6 @@ angular.module('MyApp.subjects', [])
 		$window.localStorage.setItem("subjects", JSON.stringify(subjects))
 		console.log($scope.data)
 		$window.location.reload();
-		
-
 	}
 	
 })

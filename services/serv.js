@@ -2,15 +2,10 @@ angular.module('MyApp.serv', [])
 .factory('account', function ($http, $location, $window) {
   return {
     signin : function (user) {
-      console.log('Here')
-      return $http({
-        method: 'POST',
-        url: '/api/users/signin',
-        data: user
-      })
-      .then(function (resp) {
-        return resp.data.token;
-      });
+      var creadantials = {}
+     creadantials['username'] = $window.localStorage.getItem('username');
+     creadantials['password'] = $window.localStorage.getItem('password'); 
+     return creadantials
     },
     isAuth : function () {
       return !!$window.localStorage.getItem('token.subjects');

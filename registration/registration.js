@@ -1,6 +1,5 @@
 angular.module('MyApp.registration', [])
 .controller('registrationCT',function ($scope,$location, $window) {
-	$scope.timeLeft = 18
 	$scope.data = {}
 	$scope.selected = {};
 	$scope.subjects = JSON.parse($window.localStorage.getItem('subjects'))
@@ -28,13 +27,11 @@ angular.module('MyApp.registration', [])
 			}
 		}
 		if(addedSubjects.length){
-			console.log("Here")
 			for (var j=0; j < addedSubjects.length; j++){
-			// if(object.startTime > addedSubjects[j].startTime && object.endTime <= addedSubjects[j].endTime ){
-			//    object.startTime < addedSubjects.startTime && object.endTime <= addedSubjects.endTime 
-
-			// }
-			$window.location.reload();
+				alert('Can Not Add This Subject You Have Another One At This Time')
+			if(!object.startTime > addedSubjects[j].startTime && object.startTime <= addedSubjects[j].endTime || 
+				object.endTime > addedSubjects[j].startTime && object.endTime <= addedSubjects[j].endTime){	
+			}
 		}
 	}else {
 		addedSubjects.push(object)

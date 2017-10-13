@@ -2,6 +2,7 @@
 angular.module('MyApp',[
   'MyApp.serv',
   'MyApp.signin',
+  'MyApp.signinReg',
   'MyApp.subjects',
   'MyApp.registration',
   'ngRoute'])
@@ -10,6 +11,10 @@ angular.module('MyApp',[
   .when('/signin', {
     templateUrl: 'signin/signin.html',
     controller: 'signinCT'
+  })
+  .when('/signinReg', {
+    templateUrl: 'signinReg/signinReg.html',
+    controller: 'signinRegCT'
   })
   .when('/subjects',{
     templateUrl: 'subjects/subjects.html',
