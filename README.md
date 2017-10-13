@@ -12,8 +12,8 @@ in front-end i use angularjs framework uses lib with bootstrap.
 and you can watch the video to see the result :)
 
 ## Subjects
-![Subscribed](https://media.giphy.com/media/3ov9jZFsnKQC5nFxHa/giphy.gif "Subscribed")
+![Subscribed](https://media.giphy.com/media/3ov9jZFsnKQC5nFxHa/giphy.gif)
 
 ## Register
-![Subscribed](https://media.giphy.com/media/3ov9k3MvXiwo7hQQaQ/giphy.gif "Subscribed")
+![Subscribed](https://media.giphy.com/media/3ov9k3MvXiwo7hQQaQ/giphy.gif)
 
