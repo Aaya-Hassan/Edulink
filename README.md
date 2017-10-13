@@ -12,7 +12,6 @@ in front-end i use angularjs framework uses lib with bootstrap.
 and you can watch the video to see the result :)
 
 
-![Subscribed](https://youtu.be/9f-pGN9eUs0 "Subscribed")
-
-![Subscribed](https://youtu.be/de_QPpstqak "Subscribed")
+https://youtu.be/9f-pGN9eUs0
+https://youtu.be/de_QPpstqak 
 
