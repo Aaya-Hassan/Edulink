@@ -28,9 +28,9 @@ angular.module('MyApp.registration', [])
 		}
 		if(addedSubjects.length){
 			for (var j=0; j < addedSubjects.length; j++){
-				alert('Can Not Add This Subject You Have Another One At This Time')
 			if(!object.startTime > addedSubjects[j].startTime && object.startTime <= addedSubjects[j].endTime || 
 				object.endTime > addedSubjects[j].startTime && object.endTime <= addedSubjects[j].endTime){	
+			alert('Can Not Add This Subject You Have Another One At This Time')
 			}
 		}
 	}else {
